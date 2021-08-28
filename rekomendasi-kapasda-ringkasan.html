@@ -115,80 +115,52 @@
         <div class="container">
             <div>
     <div class="row">
-        <div class="col-md-2">
-            <nav class="nav flex-column" style="margin-top: 30px">
-                <a class="nav-link" href="status-kinerja-kppd.html">Nasional</a>
-                <a class="nav-link " href="status-kinerja-kppd-a.html" >Klaster A</a>
-                <a class="nav-link " href="status-kinerja-kppd-b.html" >Klaster B</a>
-                <a class="nav-link active" href="status-kinerja-kppd-c.html" aria-current="page" >Klaster C</a>
+        <div class="col-md-2 border-right">
+            <nav class="nav flex-column nvl">
+                <a class="nav-link active" href="rekomendasi-kapasda-ringkasan.html">Nasional</a>
+                <a class="nav-link " href="rekomendasi-kapasda-ringkasan-a.html" >Klaster A</a>
+                <a class="nav-link" href="rekomendasi-kapasda-ringkasan-b.html">Klaster B</a>
+                <a class="nav-link" href="rekomendasi-kapasda-ringkasan-c.html">Klaster C</a>
             </nav>
         </div>
         <div class="col-md-10">
             <div class="row">
                 <div class="col-md-6">
-                    <table class="table table-bordered border-light" style="background-color: rgb(217, 227, 235);margin-top:50px;">
-                        <thead>
-                          <tr>
-                            <th scope="col">No.</th>
-                            <th scope="col">Provinsi</th>
-                            <th scope="col">Status Kinerja</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Maluku</td>
-                                <td>Sedang</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Papua Barat</td>
-                                <td>Rendah</td>
-                              </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Papua</td>
-                                <td>Rendah</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Maluku Utara</td>
-                                <td>Rendah</td>
-                            </tr>
-                        </tbody>
-                      </table>
+                    <div>
+                        Urusan yang menjadi kelemahan daerah :
+                        <div class="chart-box">
+                            <canvas class="chart" id="chart"></canvas>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <table class="table table-bordered border-light" style="background-color: rgb(212, 223, 231);margin-top:50px;">
-                        <thead>
-                          <tr>
-                            <th scope="col">Status Kinerja</th>
-                            <th scope="col">Frekuensi (Provinsi)</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tinggi</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Sedang</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>Rendah</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div style="margin-top: 50px;">
-                        <h4>Status Kinerja</h4>
-                        <div>
-                            <canvas class="chart" id="chart"></canvas>
+                    <div class="row">
+                        Rekomendasi : 
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Pertanian</option>
+                                <option value="1">Pariwisata</option>
+                                <option value="2">Pangan</option>
+                                <option value="3">Kepemudaan dan Olahraga</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rekomendasi">
+                            <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1.</th>
+                                    <td>Dilakukan dengan peningkatan sarana dan prasarana pendukung pertanian serta pengolahannya (methods)</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2.</th>
+                                    <td>Dilakukan melalui penyuluhan kepada masyarakat untuk mengantisipasi penyakit hewan menular (man)</td>
+                                  </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -196,73 +168,76 @@
         </div>
     </div>
     </div>
+    
+    
     <script>
     const ctx = document.getElementById('chart').getContext('2d');
-    const labels = ['Sedang','Rendah'];
+    const labels = ['Pariwisata','Kepemudaan dan Olahraga','Pangan','Kelautan dan Perikanan','Pertanian'];
     const datasets = [{
-        label : 'Status Kinerja',
-        data : [1,3],
+        label : '%',
+        data : [35,38,47,76,88],
         backgroundColor:[
-            'rgba(100, 201, 207,0.2)',
-            'rgba(135, 168, 164,0.2)'
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(240, 237, 93,0.2)',
         ],
         borderColor:[
-            'rgb(100, 201, 207)',
-            'rgb(135, 168, 164)'
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(240, 237, 93,1)',
         ],
         borderWidth:1,
-        indexAxis : 'y'
     }];
     const data = {
         labels : labels,
         datasets : datasets
     }
     const options = {
-        layout: {
-        padding: {
-            bottom: 25
-        }
-        },
-        plugins: {
-        tooltip: {
-            enabled: true,
-            callbacks: {
-            footer: (ttItem) => {
-                let sum = 0;
-                let dataArr = ttItem[0].dataset.data;
-                dataArr.map(data => {
-                sum += Number(data);
-                });
-    
-                let percentage = (ttItem[0].parsed * 100 / sum).toFixed(2) + '%';
-                return `Percentage of data: ${percentage}`;
-            }
+        responsive:true,
+        indexAxis : 'y',
+        scales: {
+            x: {
+                ticks: {
+                    callback: function(value, index, values) {
+                        return  value + '%';
+                    }
+                }
             }
         },
-        /** Imported from a question linked above.
-            Apparently Works for ChartJS V2 **/
-        datalabels: {
-            formatter: (value, dnct1) => {
-            let sum = 0;
-            let dataArr = dnct1.chart.data.datasets[0].data;
-            dataArr.map(data => {
-                sum += Number(data);
-            });
-    
-            let percentage = (value * 100 / sum).toFixed(2) + '%';
-            return percentage;
-            },
-            color: '#ff3',
-        }
-        }
+        animation: {
+            duration: 0,
+            onComplete: function () {
+                var chartInstance = this;
+                console.log(chartInstance);
+                    let ct = this.ctx;
+                    ct.textAlign = 'center';
+                    ct.fillStyle = "rgba(0, 0, 0, 1)";
+                    ct.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            console.log(bar);
+                            ct.fillText(data, bar.x+15, bar.y);
+                        });
+                    });
+                }
+            }
+
     };
     const config = {
-        type:'pie',
+        type:'bar',
         data:data,
         options:options
     }
     let myChart = new Chart(ctx,config);
     </script>
+    
     </div>
     </div>
 

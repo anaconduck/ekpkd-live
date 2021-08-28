@@ -9,17 +9,23 @@
 .container{
     font-size: 11pt;
 }
+.bold{
+    font-weight: bold;
+    padding-left: 10px;
+}
+.alpha{
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+}
 nav > a
 {
-    border-top: 1px solid rgb(65, 65, 65);
-    border-bottom: 1px solid rgb(78, 78, 78);
     color: black;
-    margin: 1px 0;
+    margin: 2px 0;
     text-decoration: none;
     cursor: pointer;
 }
 nav > a:hover{
-    background-color: rgb(252, 248, 236);
+    background-color: rgb(208, 232, 242);
 }
 a:visited, a:hover,a:active, a:hover, a:link{
     color: black;
@@ -30,6 +36,21 @@ a:visited, a:hover,a:active, a:hover, a:link{
 nav > a.active{
     background-color: rgb(121, 163, 177);
     font-weight: bold;
+}
+.border-right{
+    border-right: 1px solid rgb(69, 98, 104);
+}
+.ent{
+    margin: 10px 0;
+}
+.ent img{
+    cursor: pointer;
+}
+.x{
+    background-color: rgba(255, 158, 158, 0.692);
+}
+.v{
+    background-color: rgba(208, 232, 242, 0.712);
 }
 .color-s{
     width: fit-content;
@@ -48,4 +69,11 @@ canvas {
 }
 .nvl{
     margin-top: 60px;
+}
+.chart-box{
+    margin-top: 20px;
+}
+.rekomendasi{
+    width: 100%;
+    padding: 30px 10px 10px;
 }
