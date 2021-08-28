@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <title>EKPKD</title>
+
+  <!-- tes -->
+  <!-- Bootstrap core CSS -->
+  <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../../../assets/css/custom.css">
+  <script src="../../../vendor/chart/chart.min.js"></script>
+</head>
+
+<body>
+    <!-- https://colorhunt.co/palette/fcf8ecd0e8f279a3b1456268 -->
+
+    <div class="container">
+        <div>
+<div class="row">
+    <div class="col-md-2">
+        <nav class="nav flex-column" style="margin-top: 30px">
+            <a class="nav-link"  href="#">Nasional</a>
+            <a class="nav-link" href="#">Klaster A</a>
+            <a class="nav-link" href="#">Klaster B</a>
+            <a class="nav-link active" href="#" aria-current="page"><b>Klaster C</b></a>
+        </nav>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered border-light" style="background-color: rgb(217, 227, 235);margin-top:50px;">
+                    <thead>
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Provinsi</th>
+                        <th scope="col">Status Kinerja</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Maluku</td>
+                            <td>Sedang</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Papua Barat</td>
+                            <td>Rendah</td>
+                          </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Papua</td>
+                            <td>Rendah</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Maluku Utara</td>
+                            <td>Rendah</td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered border-light" style="background-color: rgb(212, 223, 231);margin-top:50px;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Status Kinerja</th>
+                        <th scope="col">Frekuensi (Provinsi)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tinggi</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Sedang</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Rendah</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 50px;">
+                    <h4>Status Kinerja</h4>
+                    <div>
+                        <canvas class="chart" id="chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+const ctx = document.getElementById('chart').getContext('2d');
+const labels = ['Sedang','Rendah'];
+const datasets = [{
+    label : 'Status Kinerja',
+    data : [1,3],
+    backgroundColor:[
+        'rgba(100, 201, 207,0.2)',
+        'rgba(135, 168, 164,0.2)'
+    ],
+    borderColor:[
+        'rgb(100, 201, 207)',
+        'rgb(135, 168, 164)'
+    ],
+    borderWidth:1,
+    indexAxis : 'y'
+}];
+const data = {
+    labels : labels,
+    datasets : datasets
+}
+const options = {
+    layout: {
+    padding: {
+        bottom: 25
+    }
+    },
+    plugins: {
+    tooltip: {
+        enabled: true,
+        callbacks: {
+        footer: (ttItem) => {
+            let sum = 0;
+            let dataArr = ttItem[0].dataset.data;
+            dataArr.map(data => {
+            sum += Number(data);
+            });
+
+            let percentage = (ttItem[0].parsed * 100 / sum).toFixed(2) + '%';
+            return `Percentage of data: ${percentage}`;
+        }
+        }
+    },
+    /** Imported from a question linked above.
+        Apparently Works for ChartJS V2 **/
+    datalabels: {
+        formatter: (value, dnct1) => {
+        let sum = 0;
+        let dataArr = dnct1.chart.data.datasets[0].data;
+        dataArr.map(data => {
+            sum += Number(data);
+        });
+
+        let percentage = (value * 100 / sum).toFixed(2) + '%';
+        return percentage;
+        },
+        color: '#ff3',
+    }
+    }
+};
+const config = {
+    type:'pie',
+    data:data,
+    options:options
+}
+let myChart = new Chart(ctx,config);
+</script>
+</div>
+        <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <title>EKPKD</title>
+
+  <!-- tes -->
+  <!-- Bootstrap core CSS -->
+  <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../../../assets/css/custom.css">
+  <script src="../../../vendor/chart/chart.min.js"></script>
+</head>
+
+<body>
+  <!-- https://colorhunt.co/palette/fcf8ecd0e8f279a3b1456268 -->
+
+  <div class="container">
+    <div>
+<div class="row">
+<div class="col-md-2">
+    <nav class="nav flex-column nvl">
+        <a class="nav-link active" aria-current="page" href="#">Nasional</a>
+        <a class="nav-link" href="#">Klaster A</a>
+        <a class="nav-link" href="#">Klaster B</a>
+        <a class="nav-link" href="#">Klaster C</a>
+    </nav>
+</div>
+<div class="col-md-10">
+    <div class="row">
+            Pilih IKK Outcome :
+            <div class="col-md-6">
+            <div class="input-group mb-3">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Tingkat partisipasi warga negara usia 16-18 tahun yang berpartisipasi</option>
+                  <option>Tingkat partisipasi warga negara usia 16-18 tahun yang berpartisipasi</option>
+                  <option>Tingkat partisipasi warga negara usia 16-18 tahun yang berpartisipasi</option>
+                </select>
+              </div>
+            </div>
+    </div>
+    <div class="row">
+        <img src="http://127.0.0.1:8000/assets/images/map.png" class="img-fluid" alt="...">
+        <div class="d-flex justify-content-start" style="margin-top:20px;">
+            <div class="color-s">
+                <span style="color: rgb(28, 104, 104)">■</span>Sangat Baik</div>
+            <div class="color-s">
+                <span style="color: rgb(0, 43, 43)">■</span>Baik</div>
+            <div class="color-s">
+                <span style="color: rgb(235, 226, 106)">■</span>Sedang</div>
+            <div class="color-s">
+                <span style="color: rgb(117, 119, 10)">■</span>Buruk</div>
+            <div class="color-s">
+                <span style="color: rgb(17, 17, 17)">■</span>Sangat Buruk</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered border-light" style="background-color: rgb(217, 227, 235);margin-top:50px;">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Provinsi</th>
+                    <th scope="col">Status Kinerja</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Aceh</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Sumatera Barat</td>
+                        <td>Sedang</td>
+                      </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Sumatera Selatan</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Sumatera Utara</td>
+                        <td>Sangat Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Riau</td>
+                        <td>Sangat Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Kep. Riau</td>
+                        <td>Sangat Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Jambi</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Bengkulu</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Bangka Belitung</td>
+                        <td>Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Lampung</td>
+                        <td>Buruk</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>Banten</td>
+                        <td>Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>DKI Jakarta</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Jawa Barat</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>Jawa Tengah</td>
+                        <td>Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>Jawa Timur</td>
+                        <td>Sangat Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>Yogyakarta</td>
+                        <td>Sangat Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Bali</td>
+                        <td>Baik</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">18</th>
+                        <td>Nusa Tenggara Barat</td>
+                        <td>Sangat Buruk</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">19</th>
+                        <td>Nusa Tenggara Timur</td>
+                        <td>Buruk</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">20</th>
+                        <td>Kalimantan Barat</td>
+                        <td>Baik</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-bordered border-light" style="background-color: rgb(212, 223, 231);margin-top:50px;">
+                <thead>
+                  <tr>
+                    <th scope="col">Status Kinerja</th>
+                    <th scope="col">Frekuensi (Provinsi)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sangat Baik</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Baik</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Sedang</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Buruk</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Sangat Buruk</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>34</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <h4>Status Kinerja</h4>
+                <div>
+                    <canvas class="chart" id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+const ctx = document.getElementById('chart').getContext('2d');
+const labels = ['Sangat Buruk', 'Buruk','Sedang','Baik','Sangat Baik'];
+const datasets = [{
+label : 'Status Kinerja',
+data : [3,2,11,10,5],
+backgroundColor:[
+    'rgba(54, 162, 235, 0.2)',
+],
+borderColor:[
+    'rgba(54, 162, 235, 1)'
+],
+borderWidth:1,
+indexAxis : 'y'
+}];
+const data = {
+labels : labels,
+datasets : datasets
+}
+const options = {
+responsive:true
+};
+const config = {
+type:'bar',
+data:data,
+options:options
+}
+let myChart = new Chart(ctx,config);
+</script>
+</div>
+
+
+      <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
