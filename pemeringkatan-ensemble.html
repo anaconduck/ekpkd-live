@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Venue - Responsive Web Template</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="vendor/chart/chart.min.js"></script>
+    </head>
+
+<body>
+ 
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        <a href="index.html"><div class="logo">
+                            <img src="img/logo.png" alt="Venue Logo">
+                        </div></a>
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="dropdown menu">
+                                <li><a href="#">Data</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Input</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">IKK Outcome</a></li>
+                                                <li><a href="#">IKK Makro</a></li>
+                                                <li><a href="#">Urusan</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Monitoring</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">IKK Outcome</a></li>
+                                                <li><a href="#">IKK Makro</a></li>
+                                                <li><a href="#">Urusan</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Status Kinerja</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="status-kinerja-ikk-outcome.html">IKK Outcome</a></li>
+                                        <li><a href="status-kinerja-ikk-makro.html">IKK Makro</a></li>
+                                        <li><a href="#">Urusan</a></li>
+                                        <li><a href="status-kinerja-kppd.html">KPPD</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Pemeringkatan</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="pemeringkatan-ensemble.html">Ensemble</a></li>
+                                        <li><a href="pemeringkatan-cluster.html">Klaster</a></li>
+                                        <li><a href="pemeringkatan-cluster.html">KPPD</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Rekomendasi KAPASDA</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Ringkasan</a></li>
+                                        <li><a href="#">Detail</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Dokumen Laporan</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">LPPD</a></li>
+                                        <li><a href="#">R-LPPD</a></li>
+                                        <li><a href="#">LKPJ</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">OPD</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Input</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Jumlah OPD</a></li>
+                                                <li><a href="#">Profil OPD</a></li>
+                                                <li><a href="#">Analisis Pejabat</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Monitoring</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Jumlah OPD</a></li>
+                                                <li><a href="#">Profil OPD</a></li>
+                                                <li><a href="#">Analisis Pejabat</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    
+    <div class="content">
+        <div class="container">
+            <div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-flex justify-content-between  flex-column" style="height: 70%;">
+                        <div class="peringkat">
+                            <div class="peringkat-head"><strong>Peringkat 1</strong></div>
+                            <div class="peringkat-desc">Jawa Timur</div>
+                        </div>
+                        <div class="peringkat">
+                            <div class="peringkat-head"><strong>Peringkat 2</strong></div>
+                            <div class="peringkat-desc">Banten</div>
+                        </div>
+                        <div class="peringkat">
+                            <div class="peringkat-head"><strong>Peringkat 3</strong></div>
+                            <div class="peringkat-desc">Nusa Tenggara Timur</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <table class="table table-bordered border-light" style="background-color: rgb(217, 227, 235);">
+                        <thead>
+                          <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Provinsi</th>
+                            <th scope="col">Nilai KPPD</th>
+                            <th scope="col">Kelompok Klasifikasi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Jawa Timur</td>
+                                <td>3.30</td>
+                                <td>Tinggi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>DKI Jakarta</td>
+                                <td>3.25</td>
+                                <td>Tinggi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jawa Tengah</td>
+                                <td>3.15</td>
+                                <td>Tinggi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Jawa Barat</td>
+                                <td>3.10</td>
+                                <td>Tinggi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Yogyakarta</td>
+                                <td>3.03</td>
+                                <td>Tinggi</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Banten</td>
+                                <td>2.80</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Sumatera Barat</td>
+                                <td>2.67</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Aceh</td>
+                                <td>2.60</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Kep. Riau</td>
+                                <td>2.60</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Sumatera Utara</td>
+                                <td>2.52</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11</th>
+                                <td>Riau</td>
+                                <td>2.51</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12</th>
+                                <td>Sumatera Selatan</td>
+                                <td>2.39</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">13</th>
+                                <td>Bali</td>
+                                <td>2.72</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14</th>
+                                <td>Gorontalo</td>
+                                <td>2.56</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15</th>
+                                <td>Lampung</td>
+                                <td>2.52</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16</th>
+                                <td>Jambi</td>
+                                <td>2.50</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">17</th>
+                                <td>Kalimantan Barat</td>
+                                <td>2.48</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">18</th>
+                                <td>Nusa Tenggara Barat</td>
+                                <td>2.47</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">19</th>
+                                <td>Sulawesi Utara</td>
+                                <td>2.40</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20</th>
+                                <td>Sulawesi Selatan</td>
+                                <td>2.40</td>
+                                <td>Sedang</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <table class="table table-bordered border-light" style="background-color: rgb(217, 227, 235);">
+                    <thead>
+                      <tr>
+                        <th scope="col">Kelompok Klasifikasi</th>
+                        <th scope="col">Jumlah Provinsi</th>
+                        <th scope="col">Rata-rata KPPD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Tinggi
+                            </td>
+                            <td>5</td>
+                            <td>3.17</td>
+                        </tr>
+                        <tr>
+                            <td>Sedang</td>
+                            <td>24</td>
+                            <td>2.43</td>
+                        </tr>
+                        <tr>
+                            <td>Rendah</td>
+                            <td>5</td>
+                            <td>1.88</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="chart-title">
+                        Persentase Banyaknya Provinsi per Kelompok Klasifikasi (%)
+                    </div>
+                    <div>
+                        <canvas class="chart" id="chart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="chart-title">
+                        Rata-rata KPPD per Kelompok Klasifikasi
+                    </div>
+                    <div>
+                        <canvas class="chart2" id="chart2" height="200px"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+    const ctx2 = document.getElementById('chart2').getContext('2d');
+    const labels = ['Tinggi', 'Sedang', 'Rendah'];
+    const datasets = [{
+        label : 'Persentase Banyaknya Provinsi per Kelompok Klasifikasi (%)',
+        data : [5,24,5],
+        backgroundColor:[
+            'rgba(249, 237, 105,0.2)',
+            'rgba(100, 201, 207,0.2)',
+            'rgba(135, 168, 164,0.2)'
+        ],
+        borderColor:[
+            'rgb(249, 237, 105)',
+            'rgb(100, 201, 207)',
+            'rgb(135, 168, 164)'
+        ],
+        borderWidth:1,
+        indexAxis : 'y'
+    }];
+    const datasets2= [{
+        label : 'Rata-rata KPPD per Kelompok Klasifikasi',
+        data : [3.17,2.43,1.88],
+        backgroundColor:[
+            'rgba(100, 201, 207,0.2)',
+            'rgba(100, 201, 207,0.2)',
+            'rgba(100, 201, 207,0.2)',
+        ],
+        borderColor:[
+            'rgba(100, 201, 207,1)',
+            'rgba(100, 201, 207,1)',
+            'rgba(100, 201, 207,1)',
+        ],
+        borderWidth:1
+    }];
+    const data = {
+        labels : labels,
+        datasets : datasets
+    };
+    const data2 = {
+        labels : labels,
+        datasets : datasets2
+    };
+    const options = {
+        layout: {
+        padding: {
+            bottom: 25
+        }
+        },
+        plugins: {
+        tooltip: {
+            enabled: true,
+            callbacks: {
+            footer: (ttItem) => {
+                let sum = 0;
+                let dataArr = ttItem[0].dataset.data;
+                dataArr.map(data => {
+                sum += Number(data);
+                });
+    
+                let percentage = (ttItem[0].parsed * 100 / sum).toFixed(2) + '%';
+                return `Percentage of data: ${percentage}`;
+            }
+            }
+        },
+        /** Imported from a question linked above.
+            Apparently Works for ChartJS V2 **/
+        datalabels: {
+            formatter: (value, dnct1) => {
+            let sum = 0;
+            let dataArr = dnct1.chart.data.datasets[0].data;
+            dataArr.map(data => {
+                sum += Number(data);
+            });
+    
+            let percentage = (value * 100 / sum).toFixed(2) + '%';
+            return percentage;
+            },
+            color: '#ff3',
+        }
+        }
+    };
+    const options2 = {
+        responsive :true
+    };
+    const config = {
+        type:'pie',
+        data:data,
+        options:options
+    }
+    const config2 = {
+        type:'bar',
+        data:data2,
+        options:options2,
+    }
+    let myChart = new Chart(ctx,config);
+    let myChart2 = new Chart(ctx2,config2);
+    </script>
+    </div>
+    </div>
+
+    <div class="sub-footer">
+        <p>Copyright &copy;</p>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
